@@ -83,21 +83,23 @@
                 <a class="value-card" href="trezvost.html">
                     <i class="fas fa-lightbulb "></i>
                     <h3>Трезвая страна</h3>
-                    <p>Для подробного изучения материала нажмите на плашку</p>
+                    <p>Нажмите для получения подробной информации</p>
                 </a>
 
-                <a class="value-card" href="trezvost.html">
+                <a class="value-card" href="future.html">
                     <i class="fas fa-hands-helping "></i>
                     <h3>Организации будущего</h3>
                     <p>Для подробного изучения материала нажмите на плашку</p>
                 </a>
+
+                <a class="value-card" href="here.html">
+                    <i class="fas fa-user-friends"></i>
+                    <h3>Мы тут - открытое сообщество</h3>
+                    <p>Для полноценного ознакомления нажмите на элемент</p>
+                </a>
             </div>
         </div>
 
-        <h2 class="section-title">Наша Миссия</h2>
-            <p class="mission-statement">
-                Создавать осознанное и гармоничное общество, где каждый сможет реализовать свой потенциал и внести вклад в улучшение окружающего мира, стать успешным, здоровым и счастливым.
-            </p>
     </section>
     
     <!-- Новый блок "Наша цель" -->
@@ -105,8 +107,11 @@
         <div class="container">
             <div class="goal-content" id="target">
                 <h2 class="section-title">Наша Цель</h2>
-                <p class="mission-statement">
+                <p>
                     Собирать средства и ресурсы, чтобы оплачивать услуги квалифицированных психологов и организовывать программы по развитию осознанности для тех, кто в них нуждается.
+                </p>
+                <p>
+                    Создавать осознанное и гармоничное общество, где каждый сможет реализовать свой потенциал и внести вклад в улучшение окружающего мира, стать успешным, здоровым и счастливым.
                 </p>
                 <p>
                     Мы хотим, чтобы каждый человек, независимо от его финансового положения и физического состояния, имел возможность получить поддержку в сложные периоды жизни, научиться справляться со стрессом и тревожностью, а также развить навыки осознанного проживания.
@@ -167,6 +172,53 @@
         </div>
     </footer>
 
+
+    <!-- Модальное окно поддержки -->
+<div id="supportModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Поддержать проект</h2>
+    <form id="supportForm">
+      <div class="form-group">
+        <label for="supportAmount">Сумма поддержки:</label>
+        <div class="amount-selector">
+          <button type="button" class="amount-btn" data-amount="500">500 ₽</button>
+          <button type="button" class="amount-btn" data-amount="1000">1000 ₽</button>
+          <button type="button" class="amount-btn" data-amount="2000">2000 ₽</button>
+        </div>
+        <input type="number" id="supportAmount" name="amount" placeholder="Или введите свою сумму" min="100" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="supportName">Ваше имя:</label>
+        <input type="text" id="supportName" name="name" placeholder="Как к вам обращаться" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="supportEmail">Email:</label>
+        <input type="email" id="supportEmail" name="email" placeholder="Для отправки квитанции" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="supportMessage">Пожелания (необязательно):</label>
+        <textarea id="supportMessage" name="message" placeholder="Ваши пожелания проекту"></textarea>
+      </div>
+      
+      <div class="form-group">
+        <label class="checkbox-label">
+          <input type="checkbox" name="anon" id="supportAnon"> 
+          <span>Сделать пожертвование анонимно</span>
+        </label>
+      </div>
+      
+      <button type="submit" class="btn">Подтвердить поддержку</button>
+    </form>
+  </div>
+</div>
+
     <script src="js/script.js"></script>
+    <script src="js/payment.js"></script>
+
+
 </body>
 </html>

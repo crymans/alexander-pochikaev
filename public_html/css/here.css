@@ -1,0 +1,259 @@
+        /* Дополнительные стили для страницы Мы Тут */
+        .community-hero {
+            background: url('https://images.unsplash.com/photo-1521791055366-0d553872125f') no-repeat center center/cover;
+        }
+
+        .community-hero::before {
+            background: rgba(91, 127, 164, 0.85);
+        }
+
+        .about-section {
+            background-color: #f5f9ff;
+        }
+
+        .value-card {
+            background-color: white;
+            border-left: 4px solid var(--accent-color);
+            height: 100%;
+        }
+
+        .testimonials-section {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .testimonial-card {
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .testimonial-author i {
+            margin-right: 10px;
+            color: var(--accent-color);
+        }
+
+        .cta-section {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .phone-cta {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .phone-cta i {
+            margin-right: 10px;
+        }
+
+        .city-selector {
+            margin: 30px auto;
+            max-width: 500px;
+        }
+
+        @media (max-width: 768px) {
+            .values {
+                grid-template-columns: 1fr;
+            }
+            
+            .phone-cta {
+                font-size: 1.2rem;
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .phone-cta i {
+                margin-bottom: 10px;
+                margin-right: 0;
+            }
+        }
+
+        /* Дополнительные стили для страницы Мы Тут */
+.community-hero {
+    background: url('https://images.unsplash.com/photo-1521791055366-0d553872125f') no-repeat center center/cover;
+    min-height: 100vh;
+}
+
+.community-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(91, 127, 164, 0.85);
+}
+
+.about-section {
+    background-color: #f5f9ff;
+    padding: 3rem 0;
+}
+
+.value-card {
+    background-color: white;
+    border-left: 4px solid var(--accent-color);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+}
+
+.testimonials-section {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 3rem 0;
+}
+
+.testimonial-card {
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(5px);
+}
+
+.testimonial-author {
+    font-weight: bold;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.testimonial-author i {
+    margin-right: 0.5rem;
+    color: var(--accent-color);
+}
+
+.cta-section {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.phone-cta {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.phone-cta i {
+    margin-right: 10px;
+}
+
+.city-selector {
+    margin: 30px auto;
+    max-width: 500px;
+    padding: 20px;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 10px;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.btn-outline:hover {
+    background-color: white;
+    color: var(--accent-color);
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .community-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .community-hero p {
+        font-size: 1.1rem;
+    }
+    
+    .values {
+        grid-template-columns: 1fr;
+    }
+    
+    .phone-cta {
+        font-size: 1.2rem;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .phone-cta i {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+    
+    .join-form {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .community-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .testimonial-card {
+        padding: 1rem;
+    }
+    
+    .contact-info p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Анимации для плавного появления */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.value-card,
+.testimonial-card,
+.join-form,
+.city-selector {
+    animation: fadeIn 0.6s ease forwards;
+}
+
+/* Задержки для анимации карточек */
+.value-card:nth-child(1) { animation-delay: 0.1s; }
+.value-card:nth-child(2) { animation-delay: 0.2s; }
+.value-card:nth-child(3) { animation-delay: 0.3s; }
+.value-card:nth-child(4) { animation-delay: 0.4s; }
+.value-card:nth-child(5) { animation-delay: 0.5s; }
+.value-card:nth-child(6) { animation-delay: 0.6s; }
+
+.testimonial-card:nth-child(1) { animation-delay: 0.2s; }
+.testimonial-card:nth-child(2) { animation-delay: 0.4s; }
+.testimonial-card:nth-child(3) { animation-delay: 0.6s; }
+
+/* Улучшение доступности */
+:focus {
+    outline: 2px solid white;
+    outline-offset: 2px;
+}
