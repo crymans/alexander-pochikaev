@@ -1,0 +1,272 @@
+/* Дополнительные стили для страницы Свободная среда */
+.environment-hero {
+    background: url('https://images.unsplash.com/photo-1519085360753-af0119f7cbe7') no-repeat center center/cover;
+    min-height: 100vh;
+}
+
+.environment-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(58, 97, 134, 0.85);
+}
+
+.potential-section {
+    background-color: #f5f7fa;
+    padding: 3rem 0;
+}
+
+.approach-section .value-card {
+    background-color: white;
+    border-left: 4px solid var(--accent-color);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.approach-section .value-card:hover {
+    transform: translateY(-5px);
+}
+
+.stories-section {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 3rem 0;
+}
+
+.story-card {
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(5px);
+}
+
+.story-author {
+    font-weight: bold;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.story-author i {
+    margin-right: 0.5rem;
+    color: var(--accent-color);
+}
+
+.join-section .btn {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+}
+
+.accessibility-features {
+    margin-top: 2rem;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.features-list {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.features-list li {
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.features-list i {
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+    top: 0.2rem;
+}
+
+.candidate-form-section {
+    padding: 2rem 0;
+}
+
+.join-form {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-top: 1.5rem;
+}
+
+.join-form h3 {
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .environment-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .environment-hero p {
+        font-size: 1.1rem;
+    }
+    
+    .approach-section .values {
+        grid-template-columns: 1fr;
+    }
+    
+    .join-form {
+        padding: 1rem;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 0.6rem;
+    }
+    
+    .features-list li {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .environment-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .story-card {
+        padding: 1rem;
+    }
+    
+    .contact-info p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Анимации для плавного появления */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.value-card,
+.story-card,
+.join-form,
+.accessibility-features {
+    animation: fadeIn 0.6s ease forwards;
+}
+
+/* Задержки для анимации карточек */
+.value-card:nth-child(1) { animation-delay: 0.1s; }
+.value-card:nth-child(2) { animation-delay: 0.2s; }
+.value-card:nth-child(3) { animation-delay: 0.3s; }
+.value-card:nth-child(4) { animation-delay: 0.4s; }
+
+.story-card:nth-child(1) { animation-delay: 0.2s; }
+.story-card:nth-child(2) { animation-delay: 0.4s; }
+.story-card:nth-child(3) { animation-delay: 0.6s; }
+
+/* Улучшение доступности */
+:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* Контрастные цвета для лучшей читаемости */
+.story-card,
+.testimonial-card {
+    color: white;
+}
+
+        /* Дополнительные стили для страницы Свободная среда */
+        .environment-hero {
+            background: url('https://images.unsplash.com/photo-1519085360753-af0119f7cbe7') no-repeat center center/cover;
+        }
+
+        .environment-hero::before {
+            background: rgba(58, 97, 134, 0.85);
+        }
+
+        .potential-section {
+            background-color: #f5f7fa;
+        }
+
+        .approach-section .value-card {
+            background-color: white;
+            border-left: 4px solid var(--accent-color);
+            height: 100%;
+        }
+
+        .stories-section {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .story-card {
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+
+        .story-author {
+            font-weight: bold;
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .story-author i {
+            margin-right: 10px;
+            color: var(--accent-color);
+        }
+
+        .join-section .btn {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .accessibility-features {
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .approach-section .values {
+                grid-template-columns: 1fr;
+            }
+        }
