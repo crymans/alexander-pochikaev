@@ -4,14 +4,10 @@
     # Перенаправление с корня на /index
     RewriteRule ^$ /index [L,R=301]
     
-    # Убираем дублирование слешей в URL
-    RewriteCond %{REQUEST_URI} ^(.*)/{2,}(.*)$
-    RewriteRule . %1/%2 [R=301,L]
-    
-    # Убираем расширение .php из URL (если нужно)
+    # Убираем расширение .html из URL (если нужно)
     RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_FILENAME}\.php -f
-    RewriteRule ^(.*)$ $1.php [L]
+    RewriteCond %{REQUEST_FILENAME}\.html -f
+    RewriteRule ^(.*)$ $1.html [L]
 </IfModule>
 
 # Запрещаем доступ к скрытым файлам
