@@ -1,13 +1,27 @@
-RewriteEngine On
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Перенаправление с корня на /index
+    RewriteRule ^$ /index [L,R=301]
+    
+    # Убираем дублирование слешей в URL
+    RewriteCond %{REQUEST_URI} ^(.*)/{2,}(.*)$
+    RewriteRule . %1/%2 [R=301,L]
+    
+    # Убираем расширение .php из URL (если нужно)
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}\.php -f
+    RewriteRule ^(.*)$ $1.php [L]
+</IfModule>
 
-# Убираем .html из URL
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}\.html -f
-RewriteRule ^(.*)$ $1.html [L]
+# Запрещаем доступ к скрытым файлам
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
 
-# Перенаправляем с .html на чистый URL
-RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
-RewriteRule ^ /%1 [NC,L,R=301]
+# Запрещаем листинг директорий
+Options -Indexes
 
-# Включаем слеш в конце URL (опционально)
-# DirectorySlash On
+# Устанавливаем кодировку по умолчанию
+AddDefaultCharset UTF-8
